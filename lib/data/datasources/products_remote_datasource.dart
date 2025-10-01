@@ -1,6 +1,6 @@
-import 'package:lectura_datos_api/core/error/failure.dart';
-import 'package:lectura_datos_api/core/network/network.dart';
-import 'package:lectura_datos_api/data/data.dart';
+import 'package:reading_api_data/core/error/failure.dart';
+import 'package:reading_api_data/core/network/network.dart';
+import 'package:reading_api_data/data/data.dart';
 
 import 'package:dartz/dartz.dart';
 

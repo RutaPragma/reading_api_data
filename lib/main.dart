@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lectura_datos_api/core/config/app_config.dart';
-import 'package:lectura_datos_api/presentation/page/home_page.dart';
+import 'package:reading_api_data/core/config/app_config.dart';
+import 'package:reading_api_data/presentation/page/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

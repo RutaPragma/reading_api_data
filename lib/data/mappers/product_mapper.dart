@@ -1,6 +1,6 @@
-import 'package:lectura_datos_api/data/mappers/rating_mapper.dart';
-import 'package:lectura_datos_api/data/models/product_model.dart';
-import 'package:lectura_datos_api/domain/entities/entities.dart';
+import 'package:reading_api_data/data/mappers/rating_mapper.dart';
+import 'package:reading_api_data/data/models/product_model.dart';
+import 'package:reading_api_data/domain/entities/entities.dart';
 
 class ProductMapper {
   static ProductModel fromMap(Map<String, dynamic> map) {

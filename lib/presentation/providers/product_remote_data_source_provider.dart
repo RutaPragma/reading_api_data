@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lectura_datos_api/core/config/app_config.dart';
-import 'package:lectura_datos_api/core/network/dio_client.dart';
-import 'package:lectura_datos_api/data/datasources/products_remote_datasource.dart';
+import 'package:reading_api_data/core/config/app_config.dart';
+import 'package:reading_api_data/core/network/dio_client.dart';
+import 'package:reading_api_data/data/datasources/products_remote_datasource.dart';
 
 final productsRemoteDataSourceProvider = Provider<ProductsRemoteDataSource>((
   ref,

@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:lectura_datos_api/core/error/failure.dart';
-import 'package:lectura_datos_api/domain/domain.dart';
+import 'package:reading_api_data/core/error/failure.dart';
+import 'package:reading_api_data/domain/domain.dart';
 
 class GetProductsUseCase {
   final ProductsRepository repository;

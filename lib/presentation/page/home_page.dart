@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lectura_datos_api/presentation/providers/products_notifier.dart';
+import 'package:reading_api_data/presentation/providers/products_notifier.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -12,7 +12,7 @@ class HomePage extends ConsumerWidget {
     final productsAsync = ref.watch(productsNotifierProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Productos')),
+      appBar: AppBar(title: const Text('Reading data')),
       body: productsAsync.when(
         data: (products) => ListView.builder(
           itemCount: products.length,

@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lectura_datos_api/domain/entities/product.dart' show Product;
-import 'package:lectura_datos_api/presentation/providers/get_products_usecase_provider.dart';
+import 'package:reading_api_data/domain/entities/product.dart' show Product;
+import 'package:reading_api_data/presentation/providers/get_products_usecase_provider.dart';
 
 class ProductsNotifier extends AsyncNotifier<List<Product>> {
   @override

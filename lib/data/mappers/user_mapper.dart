@@ -1,5 +1,5 @@
-import 'package:lectura_datos_api/data/models/user_model.dart';
-import 'package:lectura_datos_api/domain/entities/user.dart';
+import 'package:reading_api_data/data/models/user_model.dart';
+import 'package:reading_api_data/domain/entities/user.dart';
 
 class UserMapper {
   static UserModel fromMap(Map<String, dynamic> map) {

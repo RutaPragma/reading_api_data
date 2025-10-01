@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
-import 'package:lectura_datos_api/core/error/failure.dart';
-import 'package:lectura_datos_api/core/network/network.dart';
+import 'package:reading_api_data/core/error/failure.dart';
+import 'package:reading_api_data/core/network/network.dart';
 
 class DioClient implements HttpClient {
   DioClient({required this.baseUrl, Dio? dio})

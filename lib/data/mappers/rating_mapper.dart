@@ -1,5 +1,5 @@
-import 'package:lectura_datos_api/data/models/rating_model.dart';
-import 'package:lectura_datos_api/domain/entities/entities.dart';
+import 'package:reading_api_data/data/models/rating_model.dart';
+import 'package:reading_api_data/domain/entities/entities.dart';
 
 class RatingMapper {
   static RatingModel fromMap(Map<String, dynamic> map) {

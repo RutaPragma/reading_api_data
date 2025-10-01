@@ -1,4 +1,4 @@
-import 'package:lectura_datos_api/data/models/rating_model.dart';
+import 'package:reading_api_data/data/models/rating_model.dart';
 
 class ProductModel {
   const ProductModel({
