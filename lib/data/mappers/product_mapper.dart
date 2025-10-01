@@ -1,5 +1,6 @@
+import 'package:lectura_datos_api/data/mappers/rating_mapper.dart';
 import 'package:lectura_datos_api/data/models/product_model.dart';
-import 'package:lectura_datos_api/domain/entities/product.dart';
+import 'package:lectura_datos_api/domain/entities/entities.dart';
 
 class ProductMapper {
   static ProductModel fromMap(Map<String, dynamic> map) {
@@ -10,6 +11,7 @@ class ProductMapper {
       description: map['description'],
       category: map['category'],
       image: map['image'],
+      rating: RatingMapper.fromMap(map['rating']),
     );
   }
 
@@ -21,6 +23,7 @@ class ProductMapper {
       'description': model.description,
       'category': model.category,
       'image': model.image,
+      'rating': RatingMapper.toMap(model.rating),
     };
   }
 
@@ -32,6 +35,10 @@ class ProductMapper {
       description: model.description,
       category: model.category,
       image: model.image,
+      rating: Rating(
+        rate: model.rating?.rate ?? 0,
+        count: model.rating?.count ?? 0,
+      ),
     );
   }
 }

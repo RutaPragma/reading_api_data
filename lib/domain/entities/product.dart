@@ -1,3 +1,5 @@
+import 'package:lectura_datos_api/domain/entities/rating.dart';
+
 class Product {
   const Product({
     required this.id,
@@ -6,6 +8,7 @@ class Product {
     required this.description,
     required this.category,
     required this.image,
+    this.rating,
   });
   final int id;
   final String title;
@@ -13,4 +16,19 @@ class Product {
   final String description;
   final String category;
   final String image;
+  final Rating? rating;
+
+  @override
+  String toString() {
+    super.toString();
+    return '''
+    id: $id,
+    title: $title,
+    price: $price,
+    description: $description,
+    category: $category,
+    image: $image,
+    rating: { $rating }
+    ''';
+  }
 }

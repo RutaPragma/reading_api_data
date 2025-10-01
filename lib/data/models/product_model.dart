@@ -1,11 +1,6 @@
-class ProductModel {
-  final int id;
-  final String title;
-  final double price;
-  final String description;
-  final String category;
-  final String image;
+import 'package:lectura_datos_api/data/models/rating_model.dart';
 
+class ProductModel {
   const ProductModel({
     required this.id,
     required this.title,
@@ -13,5 +8,14 @@ class ProductModel {
     required this.description,
     required this.category,
     required this.image,
+    this.rating,
   });
+
+  final int id;
+  final String title;
+  final double price;
+  final String description;
+  final String category;
+  final String image;
+  final RatingModel? rating;
 }
