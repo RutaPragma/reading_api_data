@@ -93,7 +93,3 @@ final productsNotifierProvider =
         createProduct: createProduct,
       );
     });
-
-final counterProvider = StateProvider((ref) => 1);
-final loadingProvider = StateProvider((ref) => false);
-final contentProvider = StateProvider((ref) => []);

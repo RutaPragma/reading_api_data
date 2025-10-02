@@ -35,22 +35,29 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
 
   @override
   HttpResult<ProductModel> getProductById(int productId) async {
-    final result = await client.get<Map<String, dynamic>>(
-      '/products/$productId',
-    );
+    final String path = productId == 2 ? 'prod' : 'products';
 
-    return result.fold((failure) => Left(failure), (data) {
-      try {
-        final product = ProductMapper.fromMap(data);
-        return Right(product);
-      } catch (e) {
-        return Left(
-          UnknownFailure(
-            'Error parseando producto <ProductsRemoteDataSourceImpl><getProductById>: $e',
-          ),
-        );
-      }
-    });
+    final result = await client.get<Map<String, dynamic>>('/$path/$productId');
+
+    return result.fold(
+      (failure) => Left(
+        NotFountFailure(
+          'Error parseando producto <ProductsRemoteDataSourceImpl><getProductById>: ${failure.message}',
+        ),
+      ),
+      (data) {
+        try {
+          final product = ProductMapper.fromMap(data);
+          return Right(product);
+        } catch (e) {
+          return Left(
+            UnknownFailure(
+              'Error parseando producto <ProductsRemoteDataSourceImpl><getProductById>: $e',
+            ),
+          );
+        }
+      },
+    );
   }
 
   @override
@@ -62,7 +69,7 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
 
     return result.fold(
       (failure) => Left(
-        ServerFailure(
+        NetworkFailure(
           'Error parseando producto <ProductsRemoteDataSourceImpl><createProduct>: ${failure.message}',
         ),
       ),

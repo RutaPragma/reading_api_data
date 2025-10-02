@@ -4,6 +4,10 @@ abstract class Failure {
   const Failure(this.message, {this.code});
 }
 
+class NotFountFailure extends Failure {
+  const NotFountFailure(super.message, {super.code});
+}
+
 class ServerFailure extends Failure {
   const ServerFailure(super.message, {super.code});
 }

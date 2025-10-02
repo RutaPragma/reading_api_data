@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:reading_api_data/presentation/providers/products_notifier.dart';
+import 'package:reading_api_data/presentation/providers/providers.dart';
 import 'package:reading_api_data/presentation/widgets/widgets.dart';
 
 class HomePage extends ConsumerWidget {
@@ -45,12 +45,10 @@ class HomePage extends ConsumerWidget {
                       final notifier = ref.read(
                         productsNotifierProvider.notifier,
                       );
-                      final product = await notifier.loadProductById(
-                        counter.state,
-                      );
-                      if (product != null) {
-                        counter.state++;
-                      }
+                      await notifier.loadProductById(counter.state);
+
+                      counter.state++;
+
                       loading.state = !loading.state;
                     },
                     onLongPress: () {
