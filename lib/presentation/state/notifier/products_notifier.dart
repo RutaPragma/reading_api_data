@@ -1,11 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:reading_api_data/core/logger/app_logger.dart';
-import 'package:reading_api_data/domain/entities/product.dart' show Product;
-
 import 'package:reading_api_data/domain/entities/product.dart';
-import 'package:reading_api_data/domain/usecases/usecases.dart';
-import 'package:reading_api_data/presentation/providers/get_products_usecase_provider.dart';
+import 'package:reading_api_data/domain/usecases/product/product.dart';
+import 'package:reading_api_data/presentation/state/provider/product/product.dart';
 
 class ProductsNotifier extends StateNotifier<AsyncValue<List<Product>>> {
   ProductsNotifier({

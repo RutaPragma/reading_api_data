@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reading_api_data/domain/usecases/usecases.dart';
-import 'package:reading_api_data/presentation/providers/product_repository_provider.dart';
+import 'package:reading_api_data/presentation/state/provider/product/product_repository_provider.dart';
 
 final getProductsUseCaseProvider = Provider<GetProductsUseCase>((ref) {
   final repository = ref.watch(productsRepositoryProvider);

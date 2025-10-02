@@ -11,13 +11,13 @@ abstract class ProductsRemoteDataSource {
 }
 
 class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
-  final HttpClient client;
-
   ProductsRemoteDataSourceImpl(this.client);
+  final HttpClient client;
+  final String productPath = '/products';
 
   @override
   HttpResult<List<ProductModel>> getProducts() async {
-    final result = await client.get<List<dynamic>>('/products');
+    final result = await client.get<List<dynamic>>(productPath);
 
     return result.fold((failure) => Left(failure), (data) {
       try {
@@ -63,8 +63,9 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
   @override
   HttpResult<ProductModel> createProduct(Map<String, dynamic> product) async {
     final result = await client.post<Map<String, dynamic>>(
-      '/products',
+      productPath,
       data: product,
+      aditionalHeaders: {'AditionalHeader-test': 'application/json'},
     );
 
     return result.fold(

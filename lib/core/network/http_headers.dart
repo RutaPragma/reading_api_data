@@ -1,11 +1,11 @@
 class HttpHeaders {
-  static Map<String, String> get defaultHeaders => {
+  static final Map<String, String> defaultHeaders = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
+    'Header-test': 'application/json',
   };
 
-  static Map<String, String> withAuth(String token) => {
-    ...defaultHeaders,
-    'Authorization': 'Bearer $token',
-  };
+  static Map<String, dynamic>? aditionalHeaders(
+    Map<String, dynamic>? aditionalHeaders,
+  ) => {...defaultHeaders, ...?aditionalHeaders};
 }

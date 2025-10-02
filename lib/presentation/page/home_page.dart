@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:reading_api_data/presentation/providers/providers.dart';
+import 'package:reading_api_data/presentation/state/state.dart';
 import 'package:reading_api_data/presentation/widgets/widgets.dart';
 
 class HomePage extends ConsumerWidget {
