@@ -3,6 +3,7 @@ import 'package:reading_api_data/core/network/network.dart';
 import 'package:reading_api_data/data/data.dart';
 
 import 'package:dartz/dartz.dart';
+import 'package:reading_api_data/data/mappers/product/product_mapper.dart';
 
 abstract class ProductsRemoteDataSource {
   HttpResult<List<ProductModel>> getProducts();

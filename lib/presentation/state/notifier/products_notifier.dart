@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:reading_api_data/core/logger/app_logger.dart';
-import 'package:reading_api_data/domain/entities/product.dart';
+import 'package:reading_api_data/domain/entities/product_entities/product.dart';
 import 'package:reading_api_data/domain/usecases/product/product.dart';
 import 'package:reading_api_data/presentation/state/provider/product/product.dart';
 

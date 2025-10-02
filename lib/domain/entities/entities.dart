@@ -1,4 +1,3 @@
 export 'cart.dart';
-export 'product.dart';
-export 'rating.dart';
-export 'user.dart';
+export 'product_entities/product_entities.dart';
+export 'user_entities/user_entities.dart';

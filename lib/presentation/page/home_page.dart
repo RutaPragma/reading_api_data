@@ -77,7 +77,15 @@ class HomePage extends ConsumerWidget {
                   SyncButton(
                     text: 'Get User',
                     color: Colors.amberAccent,
-                    onPress: () {},
+                    onPress: () async {
+                      loading.state = !loading.state;
+                      final notifier = ref.read(usersNotifierProvider.notifier);
+                      await notifier.loadAllUsers();
+
+                      counter.state++;
+
+                      loading.state = !loading.state;
+                    },
                   ),
                 ],
               ),

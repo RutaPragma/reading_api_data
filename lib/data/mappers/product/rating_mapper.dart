@@ -1,4 +1,4 @@
-import 'package:reading_api_data/data/models/rating_model.dart';
+import 'package:reading_api_data/data/models/product/rating_model.dart';
 import 'package:reading_api_data/domain/entities/entities.dart';
 
 class RatingMapper {

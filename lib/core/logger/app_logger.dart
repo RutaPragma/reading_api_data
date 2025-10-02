@@ -7,7 +7,6 @@ class AppLogger {
       errorMethodCount: 5,
       colors: false,
       lineLength: 150,
-      // printEmojis: false,
       dateTimeFormat: DateTimeFormat.dateAndTime,
     ),
   );
