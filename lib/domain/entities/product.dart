@@ -22,13 +22,15 @@ class Product {
   String toString() {
     super.toString();
     return '''
-    id: $id,
-    title: $title,
-    price: $price,
-    description: $description,
-    category: $category,
-    image: $image,
-    rating: { $rating }
-    ''';
+
+  {
+    "id": $id,
+    "title": "$title",
+    "price": $price,
+    "description": "$description",
+    "category": "$category",
+    "image": "$image",
+    "rating": $rating
+  }''';
   }
 }

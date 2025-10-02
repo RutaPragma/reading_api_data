@@ -6,6 +6,11 @@ class Rating {
   @override
   String toString() {
     super.toString();
-    return '''rice: $rate, count: $count''';
+    return '''
+
+    {
+      "rice": $rate,
+      "count": $count
+    }''';
   }
 }

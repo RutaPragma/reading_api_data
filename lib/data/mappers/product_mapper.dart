@@ -11,7 +11,9 @@ class ProductMapper {
       description: map['description'],
       category: map['category'],
       image: map['image'],
-      rating: RatingMapper.fromMap(map['rating']),
+      rating: map.containsKey('rating')
+          ? RatingMapper.fromMap(map['rating'])
+          : null,
     );
   }
 
