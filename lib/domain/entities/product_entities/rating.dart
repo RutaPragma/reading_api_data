@@ -9,7 +9,7 @@ class Rating {
     return '''
 
     {
-      "rice": $rate,
+      "rate": $rate,
       "count": $count
     }''';
   }

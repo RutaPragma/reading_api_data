@@ -72,7 +72,15 @@ class HomePage extends ConsumerWidget {
                   SyncButton(
                     text: 'Get Cart',
                     color: Colors.blueAccent,
-                    onPress: () {},
+                    onPress: () async {
+                      loading.state = !loading.state;
+                      final notifier = ref.read(cartsNotifierProvider.notifier);
+                      await notifier.loadAllCarts();
+
+                      counter.state++;
+
+                      loading.state = !loading.state;
+                    },
                   ),
                   SyncButton(
                     text: 'Get User',
