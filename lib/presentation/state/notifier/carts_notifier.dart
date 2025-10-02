@@ -24,7 +24,11 @@ class CartsNotifier extends StateNotifier<AsyncValue<List<Cart>>> {
       },
       (carts) {
         state = AsyncValue.data(carts);
-        AppLogger.success(carts.toString());
+        AppLogger.success(
+          carts.toString(),
+          'loadAllCarts',
+          StackTrace.fromString('Lista de carritos de compra'),
+        );
         return carts;
       },
     );

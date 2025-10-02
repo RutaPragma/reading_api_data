@@ -31,7 +31,11 @@ class ProductsNotifier extends StateNotifier<AsyncValue<List<Product>>> {
       },
       (products) {
         state = AsyncValue.data(products);
-        AppLogger.success(products.toString());
+        AppLogger.success(
+          products.toString(),
+          'loadAllProducts',
+          StackTrace.fromString('Lista de productos'),
+        );
         return products;
       },
     );
@@ -41,12 +45,20 @@ class ProductsNotifier extends StateNotifier<AsyncValue<List<Product>>> {
     final result = await _getProductById(id);
     return result.fold(
       (failure) {
-        AppLogger.error(failure.message);
-        state = AsyncValue.error(failure, StackTrace.current);
+        AppLogger.error(
+          failure.message.toString(),
+          'loadProductById',
+          StackTrace.fromString('Consulta de producto por id => product:$id'),
+        );
+        state = AsyncValue.error(failure.message, StackTrace.current);
         return null;
       },
       (product) {
-        AppLogger.success(product.toString());
+        AppLogger.success(
+          product.toString(),
+          'loadProductById',
+          StackTrace.fromString('Consulta de producto por id => product:$id'),
+        );
         AsyncValue.data(product);
         return product;
       },

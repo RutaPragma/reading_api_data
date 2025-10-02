@@ -24,7 +24,11 @@ class UsersNotifier extends StateNotifier<AsyncValue<List<User>>> {
       },
       (users) {
         state = AsyncValue.data(users);
-        AppLogger.success(users.toString());
+        AppLogger.success(
+          users.toString(),
+          'loadAllUsers',
+          StackTrace.fromString('Lista de usuarios'),
+        );
         return users;
       },
     );
