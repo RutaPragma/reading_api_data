@@ -85,7 +85,11 @@ class ProductsNotifier extends StateNotifier<AsyncValue<List<Product>>> {
       },
 
       (product) {
-        AppLogger.success(product.toString());
+        AppLogger.success(
+          product.toString(),
+          'createProduct',
+          StackTrace.fromString('Crear un producto'),
+        );
       },
     );
   }
