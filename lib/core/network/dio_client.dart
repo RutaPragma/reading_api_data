@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 import 'package:reading_api_data/core/config/app_config.dart';
-import 'package:reading_api_data/core/enum/defautl_error.dart';
+import 'package:reading_api_data/core/costants/defautl_error.dart';
 import 'package:reading_api_data/core/error/failure.dart';
 import 'package:reading_api_data/core/network/network.dart';
 
